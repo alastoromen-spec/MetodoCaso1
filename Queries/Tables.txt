@@ -1,0 +1,51 @@
+/*Create Basic tables needed for the operation of PYME regarding Sales, Cuestomers and Employees*/
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(255) NOT NULL,
+    Price DECIMAL(10, 2) NOT NULL,
+    Stock INT NOT NULL,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Sales (
+    SaleID INT PRIMARY KEY,
+    CustomerID INT,
+    ProductID INT,
+    SaleDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID),
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+CREATE TABLE Customers (
+    CustomerID INT PRIMARY KEY,
+    CustomerName VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    Phone VARCHAR(20),
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+/* Business requirement "Historial de Precios"*/
+CREATE TABLE PriceHistory (
+    PriceHistoryID INT PRIMARY KEY,
+    ProductID INT,
+    OldPrice DECIMAL(10, 2),
+    NewPrice DECIMAL(10, 2),
+    ChangeDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (ProductID) REFERENCES Products(ProductID)
+);
+
+/* Business requirement "Actualización de Stock"*/
+CREATE TRIGGER UpdateStockAfterSale
+AFTER INSERT ON Sales
+FOR EACH ROW
+BEGIN
+    UPDATE Products SET Stock = Stock - 1 WHERE ProductID = NEW.ProductID;
+END;
+
+CREATE TRIGGER UpdateStockAfterShipment
+AFTER UPDATE ON Products
+FOR EACH ROW
+WHEN OLD.Stock < NEW.Stock
+BEGIN
+    -- Logic to handle stock update when new shipment is received
+END;
