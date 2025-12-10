@@ -1,3 +1,13 @@
+Repositorio de GIT en constante actualización hasta que se cumpla la fecha de la segunda entrega de los métodos casos o en su
+
+defecto hasta que se reciba retro del profesorado.
+
+
+
+GIT REPO: https://github.com/alastoromen-spec/MetodoCaso1
+
+
+
 🎯 Objetivo General
 
 Construir tres bases de datos completamente funcionales, documentadas y justificadas, aplicando principios profesionales de diseño de bases de datos.
@@ -113,7 +123,8 @@ Descarga el archivo .bak desde el repositorio.
 
 Colócalo en una ubicación accesible por SQL Server, por ejemplo:
 
-C:\SQLBackups\
+C:\\SQLBackups\\
+
 
 
 💡 Se recomienda evitar carpetas del sistema como Escritorio o Documentos, ya que pueden tener restricciones de permisos.
@@ -152,7 +163,7 @@ Comentarios en bloque y línea
 
 Scripts idempotentes cuando es posible
 
-Evitar SELECT * y funciones escalar no indexadas
+Evitar SELECT \* y funciones escalar no indexadas
 
 Manejo cuidadoso de NULL
 
@@ -162,7 +173,7 @@ Prioridad a la seguridad en el caso HCE (datos sensibles)
 
 El archivo principal del semestre es:
 
-📘 Documento_Metodos_Caso.docx
+📘 Documento\_Metodos\_Caso.docx
 Incluye:
 
 Portada
@@ -189,3 +200,4 @@ Envía un pull request
 📜 Licencia
 
 Este repositorio utiliza la licencia MIT, lo que permite su uso académico y profesional manteniendo créditos correspondientes.
+
