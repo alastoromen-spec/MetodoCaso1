@@ -85,25 +85,56 @@ Procedimientos.sql: SP para automatizaciones
 
 Funciones.sql: UDF para cálculos específicos
 
-▶️ Cómo Ejecutar los Scripts
+📦 Distribución de la Base de Datos mediante Archivo .BAK
 
-Instalar SQL Server Express 2019 o superior
+Este repositorio incluye un archivo .BAK generado desde SQL Server Management Studio (SSMS) con el objetivo de facilitar la restauración completa de la base de datos utilizada en los métodos de caso.
+Este enfoque permite que cualquier usuario obtenga una copia idéntica de la base de datos, incluyendo:
 
-Abrir SQL Server Management Studio (SSMS)
+Estructura completa (tablas, PK, FK, restricciones)
 
-Crear una base de datos vacía
+Datos cargados
 
-Ejecutar los archivos SQL en orden:
+Vistas
 
-1. DDL.sql
-2. DML.sql
-3. Vistas.sql
-4. Procedimientos.sql
-5. Funciones.sql
-6. Consultas.sql
+Procedimientos almacenados
+
+Funciones
+
+Índices
+
+Configuración interna del motor
+🧰 Instrucciones para restaurar la base de datos en SQL Server (SSMS)
+
+Sigue estos pasos para restaurar la base de datos desde el archivo .bak:
+
+1️⃣ Copiar el archivo .BAK a la máquina local
+
+Descarga el archivo .bak desde el repositorio.
+
+Colócalo en una ubicación accesible por SQL Server, por ejemplo:
+
+C:\SQLBackups\
 
 
-Verificar que no existan advertencias ni errores
+💡 Se recomienda evitar carpetas del sistema como Escritorio o Documentos, ya que pueden tener restricciones de permisos.
+
+2️⃣ Restaurar la base de datos en SSMS
+
+Abrir SQL Server Management Studio (SSMS).
+
+Conectarse al motor de bases de datos.
+
+En el Explorador de Objetos, clic derecho en Databases → Restore Database.
+
+Seleccionar Device → Add…
+
+Buscar el archivo .bak copiado anteriormente.
+
+Seleccionar el nombre de la base de datos destino (opcionalmente renombrarla).
+
+En la pestaña Files, verificar las rutas de los archivos .mdf y .ldf.
+
+Hacer clic en OK para iniciar la restauración.
 
 🔒 Buenas Prácticas Implementadas
 
