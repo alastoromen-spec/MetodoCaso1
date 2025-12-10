@@ -1,13 +1,17 @@
-El siguiente repositiorio consta del archivo .bak y los queries .qr para el metodo caso 1 de la materia de base de 
-datos de la universidad Universae (por actualizar metodo caso 2 y 3) 
+Acerca de este Repositorio
 
-Para validar la base de datos en su equipo basta descarcar el archivo .bak localmente y restaurar el respado en su propia instalación de 
-SMSS.
+Este repositorio contiene el desarrollo completo de los tres métodos de caso asignados durante el semestre 1 de la materia Bases de Datos (BDD).
+La documentación, scripts SQL, estructuras de datos y análisis fueron elaborados aplicando principios de:
 
-Las entidades se diseñaron de la siguiente forma:
+Diseño profesional de bases de datos relacionales
+
+Normalización hasta 3FN
+
+Buenas prácticas para SQL Server
+
+Seguridad e integridad de datos
+
+Estándares modernos de documentación en proyectos técnicos
 
 
-
-NewPrice 
-
-ChangeDate 
+Este repositorio sirve como referencia para estudiantes, docentes y desarrolladores interesados en comprender tanto el proceso de diseño como la justificación técnica detrás de cada implementación.
