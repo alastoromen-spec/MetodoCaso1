@@ -1,4 +1,4 @@
-/* ===========================================================
+c/* ===========================================================
    MÉTODO CASO U2 - TORNEO DOMINO BASE DE DATOS
    DDL 
    Author: Juan Ricardo Medina Castellanos
